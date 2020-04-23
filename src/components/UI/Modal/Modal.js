@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classes from './Modal.css'
-import Aux from '../../../hoc/AuxFolder/AuxComponent';
+import Wrapper from '../../../hoc/Wrapper/Wrapper';
 import Backdrop from '../Backdrop/Backdrop';
 
 class Modal extends Component {
@@ -15,7 +15,7 @@ class Modal extends Component {
     
     render() {
         return (
-            <Aux>
+            <Wrapper>
                 <Backdrop show={this.props.show} clicked={this.props.modalClosed} />
                 <div
                     className={classes.Modal}
@@ -25,7 +25,7 @@ class Modal extends Component {
                     }}>
                     {this.props.children}
                 </div>
-            </Aux>
+            </Wrapper>
         )
     }
 }
