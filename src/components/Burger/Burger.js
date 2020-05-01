@@ -3,6 +3,7 @@ import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 import classes from './Burger.css';
 
 const burger = (props) => {
+    console.log(props);
     let transformedIngredients = Object.keys(props.ingredientsList) // Renvoi ["cheese", "salad", "bacon", "meat"]
         .map(key => {
             return [...Array(props.ingredientsList[key])].map((_, i) => { // Récupère le nombre de ingrédients pour chaque ingrédient // c'est comme un for dans un for
